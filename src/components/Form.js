@@ -3,31 +3,40 @@ import React from 'react'
 const Form = () => {
     return (
         <div>
-            <form action='' method='POST'>
-                <div className="container center">
-                    <div class="mb-3">
-                        <label for="exampleInputName1" class="form-label">Name</label>
-                        <input type="Name" class="form-control" id="exampleInputName1" aria-describedby="NameHelp" required name = "name"/>
+            <div className="center">
+                <h3 className=' py-5 px-4 text-3xl'>Fill up the below form for any query</h3>
+                <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action='/take_data' method='POST'>
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+                            Name
+                        </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Name" name='name' required/>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required name = "email"/>
-                        
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+                            Email
+                        </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="email" placeholder="Email" name='email' required/>
                     </div>
-
-                    <div class="mb-3">
-                        <label for="exampleInputName1" class="form-label">Phone no.</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required name = "phoneno"/>
-                        
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
+                            Describe your Query
+                        </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Description" name='description' />
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label"> Description</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required name = "description"/>
-                        
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="phoneno">
+                            Phone No.
+                        </label>
+                        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="number" placeholder="Phone No." name='phoneno' required minLength="10" />
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
+                    <div className="flex items-center justify-between">
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline " type="button">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
